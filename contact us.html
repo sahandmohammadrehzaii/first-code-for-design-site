@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<title>تماس با ما</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://sahand.storage.iran.liara.space/css/style.css">
+<script src="index.js"></script>
+<link rel="icon" href="https://sahand.storage.iran.liara.space/picture/icon.png" sizes="32x32" type="https://sahand.storage.iran.liara.space/picture/icon.png">
+<link rel="icon" href="https://sahand.storage.iran.liara.space/picture/icon.png" sizes="16x16" type="https://sahand.storage.iran.liara.space/picture/icon.png">
+</head>
+<body>
+	<div class="bg">
+		<span>TypeScript</span>
+		<span>JavaScript</span>
+		<span>JS</span>
+		<span>Ajax</span>
+		<span>ES6</span>
+		<span>ECMAScript 6</span>
+		<span>Node.js</span>
+		<span>npm</span>
+		<span>npx</span>
+		<span>Yarn</span>
+		<span>React.js</span>
+		<span>ReactNative.js</span>
+		<span>Next.js</span>
+		<span>Nuxt.js</span>
+		<span>Vite.js</span>
+		<span>Vue.js</span>
+		<span>Express.js</span>
+		<span>PHP</span>
+		<span>Laravel</span>
+		<span>Blade</span>
+		<span>Composer</span>
+		<span>HTML</span>
+		<span>CSS</span>
+		<span>SCSS</span>
+		<span>SASS</span>
+		<span>Java</span>
+		<span>Android</span>
+		<span>iOS</span>
+		<span>Photoshop</span>
+		<span>Adobe XD</span>
+		<span>Figma</span>
+		<span>SEO</span>
+		<span>Git</span>
+		<span>SQL</span>
+		<span>MySQL</span>
+		<span>MangoDB</span>
+		<span>SQLite</span>
+		<span>XML</span>
+		<span>JSON</span>
+	</div>
+	<div class="d-flex fullscreen item-align-center">
+		<section class="card flex-direction-column position-relative mx-auto">
+			<header class="card-header">
+				<h1 class="card-title">تماس با ما </h1>
+				<h3></h3>
+				<h3></h3>
+			<h3></h3>
+			<div id="center">
+			</div>
+			</header>
+			<div class="card-body">
+
+				<a class="position-absolute px-3" href="tel:0905654665">0905654665</a>
+        <a class="position-absolute px-3" href="tel:0905654665">09145802172</a>
+				<a class="position-absolute px-3" href="tel:0905654665">09022707232</a>
+			</div>
+		</section>
+	</div>
+	<script>
+	const spans = () => document.querySelectorAll('span');
+
+	spans().forEach((span) => {
+		for (let i = 0; i < 10; i++) {
+			document.querySelector('.bg').append(span.cloneNode(true));
+		}
+	});
+
+	spans().forEach((span) => {
+		span.style.opacity = Math.random();
+		span.style.transform = `translate(${-90 + ~~(Math.random() * 180)}vw, ${90 - ~~(Math.random() * 180)}vh)`;
+	});
+	</script>
+</body>
+</html>

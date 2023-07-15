@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>dewsdwsd</title>
+    <style>
+      .chatbot-container {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .chatbot-header {
+        background-color: #337ab7;
+        color: white;
+        padding: 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .chatbot-dialogue {
+        height: 300px;
+        overflow-y: scroll;
+        padding: 10px;
+      }
+
+      .chatbot-message {
+        margin-bottom: 10px;
+      }
+
+      .chatbot-message p {
+        margin: 0;
+        padding: 8px;
+        border-radius: 5px;
+      }
+
+      .received {
+        background-color: #f1f1f1;
+      }
+
+      .sent {
+        background-color: #337ab7;
+        color: white;
+        text-align: right;
+      }
+
+      .chatbot-input {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+      }
+
+      .chatbot-input input {
+        flex: 1;
+        margin-right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .chatbot-input button {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #337ab7;
+        color: white;
+        cursor: pointer;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="chatbot-container">
+  <div class="chatbot-header">
+    <h3>ربات چت</h3>
+  </div>
+  <div class="chatbot-dialogue">
+    <div class="chatbot-message received">
+      <p>سلام! چطور می‌توانم به شما کمک کنم؟</p>
+    </div>
+    <div class="chatbot-message sent">
+      <p>من می‌خواهم بدانم که آیا شما می‌توانید به من کمک کنید؟</p>
+    </div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" placeholder="نوشتن پیام ..." />
+    <button>ارسال</button>
+  </div>
+</div>
+<script>
+  const chatbotDialogue = document.querySelector('.chatbot-dialogue');
+  const chatbotInput = document.querySelector('.chatbot-input input');
+
+  function sendMessage(message, sender) {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('chatbot-message', sender);
+    messageDiv.innerHTML = `<p>${message}</p>`;
+    chatbotDialogue.appendChild(messageDiv);
+  }
+
+  chatbotInput.addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) {
+      const message = event.target.value;
+      sendMessage(message, 'sent');
+      event.target.value = '';
+      // send message to backend and get response
+      const response = 'پیام شما دریافت شد!';
+      sendMessage(response, 'received');
+    }
+  });
+  </script>
+  </body>
+</html>
